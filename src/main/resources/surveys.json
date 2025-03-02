@@ -1,0 +1,57 @@
+[{
+  "type": "Тестовый опрос",
+  "link": "https://docs.google.com/spreadsheets/d/***/edit?gid=***#gid=***",
+  "testing": false,
+  "initialized": false,
+  "questions": [
+    {
+      "text": "Основной Вопрос 1",
+      "type": "CHOICE",
+      "level": "MAIN",
+      "options": [
+        {
+          "value": "Ответ без подвопроса",
+          "action": "SKIP"
+        },
+        {
+          "value": "Ответ после которого будет подвопрос"
+        }
+      ],
+      "subQuestions": {
+        "Ответ после которого будет подвопрос": {
+          "text": "Текст подвопроса",
+          "type": "FREE_TEXT",
+          "level": "SUB",
+          "options": []
+        }
+      }
+    },
+    {
+      "text": "Основной Вопрос 2",
+      "type": "CHOICE",
+      "level": "MAIN",
+      "options": [
+        {"value": "Вариант 1"},
+        {"value": "Вариант 2 после которого опрос будет завершен",
+          "action": "FLUSH"}
+      ],
+      "subQuestions": {
+        "Вариант 1": {
+          "text": "Подвопрос для варианта 1",
+          "type": "FREE_TEXT",
+          "level": "SUB",
+          "options": []
+        }
+      }
+    },
+    {
+      "text": "Основной Вопрос 3",
+      "type": "CHOICE",
+      "level": "MAIN",
+      "options": [
+        {"value": "Вариант 1"},
+        {"value": "Вариант 2"}
+      ]
+    }
+  ]
+}]

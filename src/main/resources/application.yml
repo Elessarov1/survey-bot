@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: survey_bot
+
+server:
+  address: 0.0.0.0
+  port: 8043
+
+telegram:
+  bot:
+    type: LongPolling
+    name: me_surveys_bot
+    token: ${BOT_TOKEN:8179416761:AAF6V_tSYLHbW2b1zi3vrDNjes55BbLnVGg}
+    webhook-path: /webhook
+    webhook-url: ${WEBHOOK_URL:https://f1da-66-151-43-46.ngrok-free.app}/${telegram.bot.webhook-path}
+
+admin:
+  chat_id: ${ADMIN_TG_CHAT_ID:462874696}

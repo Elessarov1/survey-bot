@@ -1,0 +1,9 @@
+services:
+  app:
+    image: survey_bot-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: always
